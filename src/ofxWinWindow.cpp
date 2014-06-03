@@ -393,7 +393,7 @@ static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
 		if (wParam == VK_SHIFT)
 			shiftK = true;
 		else if (wParam == VK_CONTROL)
-			ctrlK = false;
+			ctrlK = true;
 		key = wParam2OfKey(wParam, lParam);
 		if (key > -1)
 			ofNotifyKeyPressed(key);
