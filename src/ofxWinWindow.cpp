@@ -218,7 +218,6 @@ static int char2OFKey(TCHAR ch) {
 	
 	if (altK) {
 		cout << ch << endl;
-
 	}
 	// letters
 	else if (ch >= 65 && ch <= 90) {
@@ -415,7 +414,7 @@ static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
 
 	case WM_KEYUP: 
 		if (wParam == VK_SHIFT)
-			shiftK = true;
+			shiftK = false;
 		else if (wParam == VK_CONTROL)
 			ctrlK = false;
 		key = wParam2OfKey(wParam, lParam);
